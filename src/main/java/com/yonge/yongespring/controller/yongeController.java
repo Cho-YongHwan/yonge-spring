@@ -10,24 +10,22 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class yongeController {
 
     @GetMapping("hello")
-    public String Hello(Model skgjskejg) {
-        skgjskejg.addAttribute("data", "Hello~!");
-        skgjskejg.addAttribute("data", "Hello~!");
-        skgjskejg.addAttribute("data", "Hello~!");
-        skgjskejg.addAttribute("data", "Hello~!");
-        skgjskejg.addAttribute("data", "Hello~!");
-        skgjskejg.addAttribute("data", "Hello~!");
-        skgjskejg.addAttribute("data", "Hello~!");
-        skgjskejg.addAttribute("data", "Hello~!");
-
-
+    public String Hello(Model model) {
+        model.addAttribute("data", "Hello~!");
+        model.addAttribute("data", "Hello~!");
+        model.addAttribute("data", "Hello~!");
+        model.addAttribute("data", "Hello~!");
+        model.addAttribute("data", "Hello~!");
+        model.addAttribute("data", "Hello~!");
+        model.addAttribute("data", "Hello~!");
+        model.addAttribute("data", "Hello~!");
         return "eese";
     }
 
     @GetMapping("hello-mvc")
-    public String HelloMvc(@RequestParam("name") String name, Model skgjskejg) {
-        skgjskejg.addAttribute("data", "Hello~!");
-        skgjskejg.addAttribute("data", "Hello~!");
+    public String HelloMvc(@RequestParam("name") String name, Model model) {
+        model.addAttribute("data", "Hello~!");
+        model.addAttribute("data", "Hello~!");
         return "hello";
     }
 
